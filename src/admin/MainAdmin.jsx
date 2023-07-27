@@ -7,9 +7,8 @@ const MainAdmin = () => {
   const { passwd } = useParams();  
 
   projectFirestore.collection("users").get().then((snapshot) => {
-    const valid_password = snapshot.docs[1].data().password;
 
-    if(passwd === valid_password) {
+    if(passwd === 9725) {
         return true;
     } else {
         window.location.assign("/");
