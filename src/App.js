@@ -4,9 +4,11 @@ import AboutMe from "./pages/AboutMe";
 import MyProjects from "./pages/myProjects";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import MainAdmin from "./admin/MainAdmin";
 
 
 const App = () => {
+
   return (
     <>
       <BrowserRouter>
@@ -16,6 +18,7 @@ const App = () => {
           <Route exact path="/my-projects" element={ <MyProjects /> } />
           <Route exact path="/login-page" element={ <LoginPage /> } />
           <Route exact path="/register-page" element={ <RegisterPage /> } />
+          <Route exact path="/admin-page/:passwd" element={ <MainAdmin /> } />
           <Route path="*" element={ <h1>Error</h1> } />
         </Routes>
       </BrowserRouter>
