@@ -28,8 +28,7 @@ const LoginPage = () => {
 
         <BackToHome />
         
-        <form onSubmit={loginSubmit} action={loginSubmitState ? `/` : console.error("Login Failed")} className="bg-slate-500 w-max h-full m-16 p-16 rounded-2xl">
-
+        <form onSubmit={loginSubmit} action={loginSubmitState ? window.location.assign("/") : console.error("Login Failed")} className="bg-slate-500 w-max h-full m-16 p-16 rounded-2xl">
             <h2 className="text-white text-3xl">Login Form</h2>
             <input onChange={ (e) => setEmail(e.target.value) } className="form-input" type="email" placeholder="Enter Your Email" /> <br />
             <input onChange={ (e) => setPassword(e.target.value) } className="form-input" type="password" placeholder="Enter Your Password" /> <br />
