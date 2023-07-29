@@ -11,8 +11,6 @@ const HeaderProfile = () => {
             alias adipisci eos quia dolores animi dolor explicabo <br />
             delectus porro odio a dolorem non modi  reiciendis. <br />
         </p>
-
-
     </div>
   )
 }

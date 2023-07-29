@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const NavBar = () => {
   return (
-    <div className="fixed left-0 right-0 bg-slate-200">
+    <div className="fixed left-0 right-0 h-20 bg-slate-200 shadow-slate-400 shadow-lg">
         
         <nav className="h-10 w-full p-2">
             
@@ -24,17 +24,6 @@ const NavBar = () => {
 
             </ul>
 
-            <ul className="flex flex-row float-right space-x-5">
-
-                <li className="mb-3 text-xl text-black">
-                    <Link to="/login-page">Log In</Link>
-                </li>
-
-                <li className="mb-3 text-xl text-black">
-                    <Link to="/register-page">Register</Link>
-                </li>
-
-            </ul>
         </nav>
 
     </div>
