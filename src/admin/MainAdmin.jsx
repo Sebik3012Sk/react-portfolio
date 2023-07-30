@@ -1,26 +1,23 @@
 import { useParams } from "react-router-dom";
-import { projectFirestore } from "../firebase/config";
 import HeaderProfile from "../components/HeaderProfile";
+import NavBar from "../components/NavBar";
 
 const MainAdmin = () => {
 
-  const { passwd } = useParams();  
 
-  projectFirestore.collection("users").get().then((snapshot) => {
-
-    if(passwd === 9725) {
-        return true;
-    } else {
-        window.location.assign("/");
-    }
-  })
-
-  // function 
+  const { passwd } = useParams();
+ 
+  console.log(passwd);
 
   return (
     <div>
+
+        <NavBar />
         <HeaderProfile />
-        <p>
+
+        <h2 className="text-3xl text-center m-2 p-3 subpixel-antialiased italic">Admin System</h2>
+
+        <p className="m-10 shadow-lg shadow-slate-400 p-5 rounded-xl">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid culpa dolorum at earum sed reprehenderit. Ipsum laborum quas vel culpa distinctio nulla doloribus itaque veritatis beatae obcaecati, molestias quos vero!
             Odio, libero! Temporibus expedita nemo esse molestias, atque accusamus sint repudiandae ducimus explicabo obcaecati, quaerat autem reiciendis animi quasi dolore ab! In facere quo nostrum perferendis dolores corrupti, nemo optio?
             Fuga autem iusto veritatis amet quidem repellat eveniet cumque eos voluptatem esse rem quae nobis magnam aliquid, soluta molestias corrupti dicta ex modi doloremque perspiciatis est ad. Officia, totam quia!
