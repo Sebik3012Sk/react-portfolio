@@ -4,6 +4,7 @@ import AboutMe from "./pages/AboutMe";
 import MyProjects from "./pages/myProjects";
 import MainAdmin from "./admin/MainAdmin";
 import ErrorPage from "./pages/error/ErrorPage";
+import Test from "./testing/Test";
 
 
 const App = () => {
@@ -16,11 +17,13 @@ const App = () => {
           <Route exact path="/about-me" element={ <AboutMe /> } />
           <Route exact path="/my-projects" element={ <MyProjects /> } />
           <Route exact path="/admin-page/:passwd" element={ <MainAdmin /> } />
+          <Route exact path="/testing" element={ <Test /> } />
           <Route path="*" element={ <ErrorPage /> } />
         </Routes>
       </BrowserRouter>
     </>
   );
+  
 };
 
 export default App;
